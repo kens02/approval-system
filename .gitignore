@@ -1,0 +1,334 @@
+# =============================================================================
+# 承認決裁システム .gitignore
+# 構成: C# ASP.NET Core 7 (API) + Next.js 14 (Web) + MySQL 8.0
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 誤って作成された $HOME ディレクトリ（NVM のインストール痕跡など）
+# -----------------------------------------------------------------------------
+$HOME/
+**/$HOME/
+.nvm/
+
+# -----------------------------------------------------------------------------
+# OS 関連
+# -----------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100
+.TemporaryItems
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# -----------------------------------------------------------------------------
+# エディタ・IDE
+# -----------------------------------------------------------------------------
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.code-workspace
+
+# JetBrains (Rider / WebStorm / IntelliJ)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# -----------------------------------------------------------------------------
+# .NET / C# (ASP.NET Core 7)
+# -----------------------------------------------------------------------------
+# ビルド出力
+bin/
+obj/
+out/
+[Dd]ebug/
+[Rr]elease/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# テスト・カバレッジ
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+*.opencover.xml
+*.dotCover
+
+# EF Core
+*.mdf
+*.ldf
+*.ndf
+**/Migrations/__pycache__/
+
+# Roslyn / ReSharper / StyleCop
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+StyleCopReport.xml
+
+# Publish
+[Pp]ublish/
+publish/
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.publishproj
+PublishScripts/
+
+# その他 .NET
+*.svclog
+*.scc
+ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+
+# -----------------------------------------------------------------------------
+# Node.js / Next.js / フロントエンド
+# -----------------------------------------------------------------------------
+# 依存
+node_modules/
+jspm_packages/
+bower_components/
+.pnp.*
+.pnp/
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+.vercel
+
+# ビルド成果物
+build/
+dist/
+.turbo/
+.swc/
+
+# キャッシュ・ログ
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+.npm
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache/
+.rollup.cache/
+
+# テスト
+coverage/
+*.lcov
+.nyc_output/
+playwright-report/
+playwright/.cache/
+test-results/
+
+# TypeScript
+*.tsbuildinfo
+
+# Storybook
+storybook-static/
+
+# -----------------------------------------------------------------------------
+# 環境変数・シークレット（最重要：絶対にコミットしない）
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# ASP.NET Core ユーザーシークレット
+secrets.json
+appsettings.*.json
+!appsettings.json
+!appsettings.Development.json.example
+!appsettings.Production.json.example
+
+# 認証情報・鍵
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+*.cer
+*.der
+*.jks
+*.keystore
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+.ssh/
+
+# -----------------------------------------------------------------------------
+# データベース・ローカルデータ
+# -----------------------------------------------------------------------------
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.mdb
+*.accdb
+local.db
+data/
+mysql-data/
+postgres-data/
+*.dump
+*.sql.gz
+*.bak
+
+# -----------------------------------------------------------------------------
+# Docker / コンテナ
+# -----------------------------------------------------------------------------
+docker-compose.override.yml
+.docker/
+volumes/
+
+# -----------------------------------------------------------------------------
+# ログ・一時ファイル
+# -----------------------------------------------------------------------------
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+*.pid
+*.seed
+*.pid.lock
+
+# 一時ファイル
+tmp/
+temp/
+.tmp/
+*.tmp
+*.bak
+*.swp
+*.orig
+
+# -----------------------------------------------------------------------------
+# CI/CD・デプロイ
+# -----------------------------------------------------------------------------
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# -----------------------------------------------------------------------------
+# ドキュメント生成物
+# -----------------------------------------------------------------------------
+_site/
+.docusaurus/
+docs/_build/
+docs/.vuepress/dist/
+
+# -----------------------------------------------------------------------------
+# その他
+# -----------------------------------------------------------------------------
+# ローカル設定オーバーライド
+*.local.json
+*.local.yml
+*.local.yaml
+local.config.*
+
+# OSやエディタが作るバックアップ
+*.orig
+*.rej
+
+# Claude Code / 開発支援ツールのローカル設定
+.claude/
+.claude-local/
+CLAUDE.local.md
